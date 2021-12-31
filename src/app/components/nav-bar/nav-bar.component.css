@@ -1,0 +1,7 @@
+.a a[routerLink], .a a{
+  color: #fff;
+}
+
+.a a[routerLink]:hover, .a a:hover{
+  color: rgb(243, 106, 106);
+}
