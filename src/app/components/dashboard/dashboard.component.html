@@ -3,7 +3,7 @@
     <input class="form-control row-fluid" type="text" placeholder="Search name, flavor or size of product you're looking for" [(ngModel)]="titles">
   </div>
 
-  <div class="shadow-lg col-sm-4 p-3" *ngFor="let x of properties | filter:titles:'title'">
+  <div class="shadow-lg col-sm-4 p-3 mb-5" *ngFor="let x of properties | filter:titles:'title'">
     <app-item-card [property]="x"></app-item-card>
   </div>
 </div>
