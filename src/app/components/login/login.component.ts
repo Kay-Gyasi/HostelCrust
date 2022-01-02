@@ -28,12 +28,13 @@ export class LoginComponent implements OnInit {
       next: data => {
         console.log(data),
         localStorage.setItem('token', JSON.stringify(data)),
-        this.alertify.success("Successful Login");
+        this.alertify.success("Successful Login"),
+        this.router.navigate(['/']);
       },
-      error: error => {this.alertify.failed("Invalid login");}
+      error: error => {this.alertify.failed("Invalid login"), form.reset()}
     });
 
-    setTimeout(() => this.router.navigate(['/']), 500);
+    //setTimeout(() => this.router.navigate(['/']), 500);
 
   }
 
