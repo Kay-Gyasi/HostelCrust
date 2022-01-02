@@ -34,20 +34,26 @@ export class DashboardComponent implements OnInit {
       this.category = "Other";
     }
 
-    this.store.select((store) => store.hostel.list).pipe(
-      map(data => {
-        for(const id in data){
-          if(data.hasOwnProperty(id) && data[id].categoryName == this.category){
-            this.properties.push(data[id])
-          }
-        }
-      }
-      )
-    );
-
+    this.showProducts().subscribe(data =>
+      this.properties = data);
     this.loading$ = this.store.select((store) => store.hostel.loading);
     this.error$ = this.store.select((store) => store.hostel.error);
 
     this.store.dispatch(new LoadHostelAction);
+  }
+
+  showProducts(){
+    return this.store.select((store) => store.hostel.list).pipe(
+      map(data => {
+        const props:Product[] = [];
+
+        for(const id in data){
+          if(data.hasOwnProperty(id) && data[id].categoryName === this.category){
+            props.push(data[id]);
+          }
+        }
+        return props;
+      })
+    )
   }
 }

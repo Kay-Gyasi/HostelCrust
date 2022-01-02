@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/product';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Register } from '../models/register';
 import { LoginReq } from '../models/loginReq';
 import { Detail } from '../models/orderDetail';
@@ -17,8 +17,19 @@ export class SharedService {
   constructor(private http:HttpClient) { }
 
   //#region Products
-  GetProducts():Observable<Array<Product>>{
-    return this.http.get<Product[]>(this.apiurl+"Product/GetProducts");
+  GetProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.apiurl+"Product/GetProducts").pipe(
+      map(data => {
+        const productArray:Product[] = [];
+
+        for(const id in data){
+          if(data.hasOwnProperty(id)){
+            productArray.push(data[id])
+          }
+        }
+        return productArray;
+      })
+    );
   };
 
   addUser(user: Register){
