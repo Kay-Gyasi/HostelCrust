@@ -72,8 +72,64 @@ export class ItemCardComponent implements OnInit {
     return false;
   }
 
-  isPizza(){
-    if(this.property.categoryName == "Pizza"){
+  isPepperoni(){
+    if(this.property.title.includes("Pepperoni")){
+      return true;
+    }
+    return false;
+  }
+
+  isVegetable(){
+    if(this.property.title.includes("Vegetable")){
+      return true;
+    }
+    return false;
+  }
+
+  isBeef(){
+    if(this.property.title.includes("Beef")){
+      return true;
+    }
+    return false;
+  }
+
+  isMeat(){
+    if(this.property.title.includes("Meat")){
+      return true;
+    }
+    return false;
+  }
+
+  isAll(){
+    if(this.property.title.includes("ALL")){
+      return true;
+    }
+    return false;
+  }
+
+  isCake(){
+    if(this.property.title.includes("Cake In Cup (Chocolate)")){
+      return true;
+    }
+    return false;
+  }
+
+  isRedVelvet(){
+    if(this.property.title.includes("Cake In Cup (Red velvet)")){
+      return true;
+    }
+    return false;
+  }
+
+  isVanilla(){
+    if(this.property.title.includes("Cake In Cup (Vanilla)")){
+      return true;
+    }
+    return false;
+  }
+
+  isMilk(){
+    if(this.property.title.includes("Milkshake")){
       return true;
     }
     return false;

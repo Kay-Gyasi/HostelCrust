@@ -1,7 +1,15 @@
 <div class="card">
   <div class="card-img-wrapper">
-    <img *ngIf="isPizza()" class="card-img-top pic" src="assets/images/pizza.jpeg">
-    <img *ngIf="!isPizza()" class="card-img-top pic" src="assets/images/pizza.jpeg">
+    <img *ngIf="isPepperoni()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg">
+    <img *ngIf="isVegetable()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2021/12/30/11/33/italian-cuisine-6903774_1280.jpg">
+    <img *ngIf="isBeef()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2017/06/27/08/41/gourmet-2446699_1280.jpg">
+    <img *ngIf="isMeat()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2021/04/06/14/38/pizza-6156566_1280.jpg">
+    <img *ngIf="isAll()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2015/04/28/21/20/pizza-744405_1280.jpg">
+
+    <img *ngIf="isCake()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2017/01/23/08/45/cake-2001781_1280.jpg">
+    <img *ngIf="isRedVelvet()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2020/07/06/14/45/cake-5377289_1280.jpg">
+    <img *ngIf="isVanilla()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2018/05/08/10/41/apple-pie-3382722_1280.jpg">
+    <img *ngIf="isMilk()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2017/05/28/01/59/chocolate-2349917_1280.jpg">
     <ul class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
         <button routerLink="/" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
