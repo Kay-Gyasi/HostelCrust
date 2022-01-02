@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './state/store/reducer';
 import { HostelEffects } from './state/effect/hostel.effect';
+import { PhoneFooterComponent } from './components/phone-footer/phone-footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HostelEffects } from './state/effect/hostel.effect';
     LoginComponent,
     CartComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    PhoneFooterComponent
   ],
   imports: [
     BrowserModule,

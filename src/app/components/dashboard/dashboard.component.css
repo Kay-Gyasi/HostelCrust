@@ -1,0 +1,23 @@
+#footer{
+  position: absolute;
+  margin-top: -20vw;
+  width: 95vw;
+  margin-left: -7vw;
+}
+
+#phone-footer{
+  display: none;
+}
+
+@media only screen and (max-width:600px) {
+  #footer{
+    display: none;
+  }
+
+  #phone-footer{
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 1.5vw;
+  }
+}

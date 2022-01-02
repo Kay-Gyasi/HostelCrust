@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px){
+
+    #mobileFooter{
+        display: flex;
+        margin-top: 20vw;
+        margin-left: 5vw;
+        font-size: 3.5vw;
+    }
+
+    #sociallinks{
+        margin-left: 23vw;
+        margin-top: 14vw;
+    }
+
+    address span{
+        margin-right: 4vw;
+    }
+
+    #at{
+        margin-left: 35vw;
+        margin-top: 15vw;
+        font-size: 2vw;
+    }
+}
