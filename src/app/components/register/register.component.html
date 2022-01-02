@@ -7,7 +7,7 @@
       <form #registerForm="ngForm" novalidate (ngSubmit)="onSubmit(registerInfo, registerForm)">
         <div class="card-body">
           <div class="form-group">
-            <label for="username">FirstName</label>
+            <label for="username">Firstname</label>
             <input #name="ngModel" required name="firstname" type="text" class="form-control" [(ngModel)]="registerInfo.FirstName"
             [class.is-invalid]="name.touched && name.invalid">
 
@@ -15,7 +15,7 @@
           </div>
 
           <div class="form-group">
-            <label for="username">LastName</label>
+            <label for="username">Lastname</label>
             <input #lname="ngModel" required name="lastname" type="text" class="form-control" [(ngModel)]="registerInfo.LastName"
             [class.is-invalid]="lname.touched && lname.invalid">
 
