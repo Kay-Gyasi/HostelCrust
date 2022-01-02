@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card col-lg-6 col-12 m-auto">
+    <div class="m-auto col-12">
+      <div class="card-header" style="text-align:center">
+        Log into your account
+      </div>
+      <form #loginForm="ngForm" novalidate (ngSubmit)="onSubmit(loginForm)">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="username">Name</label>
+            <input #name="ngModel" required name="firstname" type="text" class="form-control" [(ngModel)]="loginReq.username"
+            [class.is-invalid]="name.touched && name.invalid">
+
+            <span *ngIf="name.touched && name.invalid" class="text-danger">Field is required</span>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input #password="ngModel" required name="password" type="password" class="form-control" [(ngModel)]="loginReq.password"
+            [class.is-invalid]="password.touched && password.invalid">
+
+            <span *ngIf="password.touched && password.invalid" class="text-danger">Field is required</span>
+          </div>
+        </div>
+        <div class="card-footer mt-2">
+          <button type="submit" class="btn btn-primary" style="margin-right: 0.5vw;"
+          [disabled]="loginForm.form.invalid">Submit</button>
+          <button type="cancel" routerLink="/" class="btn btn-secondary">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

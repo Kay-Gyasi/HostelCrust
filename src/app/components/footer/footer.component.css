@@ -1,0 +1,28 @@
+.row{
+  font-size: 1.1vw;
+  Border-top: 0.1vw dashed white;
+}
+
+address{
+  margin-top: 1vw;
+}
+
+#sociallinks{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 4vw;
+}
+
+#footer{
+  position: relative;
+  top: 0vw;
+  margin-top: 40vw;
+  height: 12.4vw;
+}
+
+#at{
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  padding-top: 4vw;
+}
