@@ -1,0 +1,18 @@
+#footer{
+  position: relative;
+  top: 8vw;
+}
+
+phone-footer{
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  app-footer{
+    display: none;
+  }
+
+  phone-footer{
+      display: flex;
+  }
+}
