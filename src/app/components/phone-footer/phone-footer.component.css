@@ -2,14 +2,14 @@
 
     #mobileFooter{
       background-color: rgb(68, 66, 66);
+      width:90vw;
         display: flex;
         margin-top: 20vw;
-        margin-left: 5vw;
         font-size: 3.5vw;
     }
 
     #sociallinks{
-        margin-left: 23vw;
+        margin-left: 20vw;
         margin-top: 14vw;
     }
 
@@ -18,7 +18,7 @@
     }
 
     #at{
-        margin-left: 35vw;
+        margin-left: 30vw;
         margin-top: 15vw;
         font-size: 2vw;
     }
