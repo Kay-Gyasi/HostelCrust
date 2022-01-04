@@ -1,6 +1,7 @@
 @media only screen and (max-width: 600px){
 
     #mobileFooter{
+      background-color: rgb(68, 66, 66);
         display: flex;
         margin-top: 20vw;
         margin-left: 5vw;
