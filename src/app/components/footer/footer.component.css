@@ -1,6 +1,5 @@
 .row{
   font-size: 1.1vw;
-  Border-top: 0.1vw dashed white;
 }
 
 address{
@@ -17,8 +16,8 @@ address{
   position: relative;
   top: 0vw;
   margin-top: 10vw;
-  height: 20vw;
-  padding-top: 5vw;
+  height: 18vw;
+  padding-top: 3vw;
   padding-bottom: 2vw;
 }
 
