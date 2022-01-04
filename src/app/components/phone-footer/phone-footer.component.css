@@ -2,10 +2,13 @@
 
     #mobileFooter{
       background-color: rgb(68, 66, 66);
-      width:90vw;
-        display: flex;
-        margin-top: 20vw;
-        font-size: 3.5vw;
+      width:96vw;
+      display: flex;
+      margin-top: 15vw;
+      font-size: 3.5vw;
+      padding-left: 2vw;
+      padding-top: 2vw;
+
     }
 
     #sociallinks{
