@@ -16,8 +16,9 @@ address{
 #footer{
   position: relative;
   top: 0vw;
-  margin-top: 20vw;
+  margin-top: 10vw;
   height: 12.4vw;
+  padding-top: 5vw;
 }
 
 #at{
