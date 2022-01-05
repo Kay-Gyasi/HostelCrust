@@ -83,12 +83,14 @@ export class CartComponent implements OnInit {
   }
 
   clearCart(){
-    localStorage.removeItem('order');
+    localStorage.removeItem('Cart');
 
     this.isDeliver = false;
 
     this.addiInfo = "";
 
     this.address = "";
+
+    window.location.reload();
   }
 }
