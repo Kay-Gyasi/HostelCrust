@@ -20,11 +20,6 @@ form{
     display: none;
   }
 
-  .form-floating{
-    width: 80vw;
-    margin-left: -8vw;
-  }
-
   .text-danger{
     display: none;
   }
@@ -48,9 +43,8 @@ form{
     display: none;
   }
 
-  .form-floating{
-    width: 70vw;
-    text-align: center;
+  .text-danger{
+    display: none;
   }
 
   #header{

@@ -14,7 +14,8 @@
 
         <!-- Form -->
         <div class="row">
-          <form #registerForm="ngForm" novalidate (ngSubmit)="onSubmit(registerInfo, registerForm)">
+          <form #registerForm="ngForm" novalidate (ngSubmit)="onSubmit(registerInfo, registerForm)"
+          class="col-12">
             <div class="form-group mb-3 mt-3">
               <div class="form-floating">
                 <input #name="ngModel" required name="firstname" id="firstname" type="text" class="form-control" [(ngModel)]="registerInfo.FirstName"
