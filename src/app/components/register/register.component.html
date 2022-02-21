@@ -2,7 +2,7 @@
     <div class="row container" style="background-color:darksalmon">
       <div class="col-6 imgHalf">
         <img src="https://cdn.pixabay.com/photo/2020/05/17/04/22/pizza-5179939_960_720.jpg" alt="Pizza image"
-        style="width: 40vw; margin-left:-3vw; height:100%; opacity: 60%;">
+        style="width: 40vw; margin-left:-2.8vw; height:100%; opacity: 60%;">
       </div>
       <div class="col-12 col-lg-6" style="text-align: center; font-style: italic;">
         <div class="row mt-5">
@@ -24,7 +24,7 @@
               </div>
 
 
-              <span *ngIf="name.touched && name.invalid" class="text-danger">Field is required</span>
+              <!-- <span *ngIf="name.touched && name.invalid" class="text-danger">Field is required</span> -->
             </div>
 
             <div class="form-group mb-3">
@@ -34,7 +34,7 @@
                 <label for="lastname">Lastname</label>
               </div>
 
-              <span *ngIf="lname.touched && lname.invalid" class="text-danger">Field is required</span>
+              <!-- <span *ngIf="lname.touched && lname.invalid" class="text-danger">Field is required</span> -->
             </div>
 
             <div class="form-group mb-3">
@@ -44,10 +44,10 @@
                 <label>Email Address</label>
               </div>
 
-              <div *ngIf="email.errors && email.touched">
+              <!-- <div *ngIf="email.errors && email.touched">
                 <span *ngIf="email.errors['required']" class="text-danger">Field is required</span>
                 <span *ngIf="email.errors['pattern']" class="text-danger">Invalid email</span>
-              </div>
+              </div> -->
             </div>
 
             <div class="form-group mb-3">
@@ -57,10 +57,10 @@
                 <label>Mobile</label>
               </div>
 
-              <div *ngIf="phone.errors && phone.touched">
+              <!-- <div *ngIf="phone.errors && phone.touched">
                 <span *ngIf="phone.errors['required']" class="text-danger">Field is required</span>
               <span *ngIf="phone.errors['pattern']" class="text-danger">Input must be 10 digits</span>
-              </div>
+              </div> -->
             </div>
 
             <div class="form-group mb-3">
@@ -70,7 +70,7 @@
                 <label>Password</label>
               </div>
 
-              <span *ngIf="password.touched && password.invalid" class="text-danger">Field is required</span>
+              <!-- <span *ngIf="password.touched && password.invalid" class="text-danger">Field is required</span> -->
             </div>
 
             <div class="form-group mb-3">
