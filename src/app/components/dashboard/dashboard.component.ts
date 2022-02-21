@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
 import { Product } from 'src/app/models/product';
 import { AlertifyService } from 'src/app/services/alertify.service';
-import { SharedService } from 'src/app/services/shared.service';
 import { LoadHostelAction } from 'src/app/state/store/action/hostel.action';
 import { AppState } from 'src/app/state/store/reducer';
 

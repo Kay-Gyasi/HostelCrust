@@ -12,7 +12,9 @@ import { Order } from '../models/Order';
 })
 export class SharedService {
 
-  private readonly apiurl = "http://hostelcrust.azurewebsites.net/api/";
+  //private readonly apiurl = "https://localhost:7189/api/";
+
+  private readonly apiurl = "https://kaygyasiapi.herokuapp.com/api/";
 
   constructor(private http:HttpClient) { }
 
