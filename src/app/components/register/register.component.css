@@ -36,6 +36,14 @@ form{
   .btncontainer{
     padding-left: 5vw;
   }
+
+  .form-container{
+    width: 75vw;
+  }
+
+  .form-floating{
+    margin-left: -8vw;
+  }
 }
 
 @media screen and (min-width:620px) and (max-width: 1000px) {
