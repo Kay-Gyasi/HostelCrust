@@ -1,0 +1,64 @@
+.bigcontainer{
+  box-shadow: 2px 5px;
+  background-color:darksalmon;
+}
+
+.text-danger{
+  font-size: 1vw;
+}
+#msg{
+  color:grey;
+  font-size: 1.2vw;
+}
+
+form{
+  margin-left: 1vw;
+}
+
+@media screen and (max-width: 620px) {
+  .imgHalf{
+    display: none;
+  }
+
+  .form-floating{
+    width: 80vw;
+    margin-left: -10vw;
+  }
+
+  #header{
+    font-size: 10vw;
+    margin-bottom: 4vh;
+  }
+
+  #msg{
+    font-size: 4vw;
+  }
+
+  .btncontainer{
+    padding-left: 5vw;
+  }
+}
+
+@media screen and (min-width:620px) and (max-width: 1000px) {
+  .imgHalf{
+    display: none;
+  }
+
+  .form-floating{
+    width: 70vw;
+    text-align: center;
+  }
+
+  #header{
+    font-size: 5vw;
+    margin-bottom: 4vh;
+  }
+
+  #msg{
+    font-size: 2vw;
+  }
+
+  .btncontainer{
+    padding-left: 5vw;
+  }
+}

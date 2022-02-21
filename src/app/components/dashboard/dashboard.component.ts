@@ -47,7 +47,7 @@ export class DashboardComponent implements OnInit {
         const props:Product[] = [];
 
         for(const id in data){
-          if(data.hasOwnProperty(id) && data[id].categoryName === this.category){
+          if(data.hasOwnProperty(id) && data[id].categoryName === this.category && data[id].isAvailable == true){
             props.push(data[id]);
           }
         }
