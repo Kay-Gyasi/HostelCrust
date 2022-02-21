@@ -25,6 +25,10 @@ form{
     margin-left: -8vw;
   }
 
+  .text-danger{
+    display: none;
+  }
+
   #header{
     font-size: 10vw;
     margin-bottom: 4vh;
