@@ -1,6 +1,6 @@
 .bigcontainer{
-  box-shadow: 2px 5px;
-  background-color:darksalmon;
+  box-shadow: 2px 5px 5px 5px;
+  background-color:wheat;
 }
 
 .text-danger{

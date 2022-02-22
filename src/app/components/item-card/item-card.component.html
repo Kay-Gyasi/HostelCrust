@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" style="background-color:#dbbb76;">
   <div class="card-img-wrapper">
     <img *ngIf="isPepperoni()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg">
     <img *ngIf="isVegetable()" class="card-img-top pic" src="https://cdn.pixabay.com/photo/2021/12/30/11/33/italian-cuisine-6903774_1280.jpg">
@@ -35,7 +35,7 @@
   </div>
 
   <div class="card-footer p-2">
-    <button *ngIf="!isOrder()" class="btn btn-primary" (click)="addToCart(propCart)">Add to cart</button>
+    <button *ngIf="!isOrder()" class="btn btn-success" (click)="addToCart(propCart)">Add to cart</button>
     <button *ngIf="isOrder()" class="btn btn-secondary" (click)="removeFromCart()">Remove from cart</button>
   </div>
 </div>

@@ -1,0 +1,9 @@
+#form{
+  width: 40vw;
+}
+
+@media screen and (max-width: 620px) {
+  #form{
+    width:70vw;
+  }
+}
