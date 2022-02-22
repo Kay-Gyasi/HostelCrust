@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Product } from '../models/product';
 import { map, Observable } from 'rxjs';
 import { Register } from '../models/register';
 import { LoginReq } from '../models/loginReq';
 import { Detail } from '../models/orderDetail';
 import { Order } from '../models/Order';
+import { LoginRes } from '../models/loginRes';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,21 @@ export class SharedService {
 
   private readonly apiurl = "https://kaygyasiapi.herokuapp.com/api/";
 
-  constructor(private http:HttpClient) { }
+  loginInfo:LoginRes = new LoginRes();
+  headers:HttpHeaders;
+
+  constructor(private http:HttpClient) {
+  }
+
+  Authorize(){
+    this.loginInfo = JSON.parse(localStorage.getItem("token") || '{ }');
+    this.headers = new HttpHeaders().set("Authorization", "bearer " + this.loginInfo.token);
+  }
 
   //#region Products
   GetProducts(): Observable<Product[]>{
-    return this.http.get<Product[]>(this.apiurl+"Product/GetProducts").pipe(
+    this.Authorize();
+    return this.http.get<Product[]>(this.apiurl+"Product/GetProducts", {headers: this.headers}).pipe(
       map(data => {
         const productArray:Product[] = [];
 
@@ -47,11 +58,13 @@ export class SharedService {
 
   //#region OrderDetails
   postOrderDetail(detail:Detail){
-    return this.http.post(this.apiurl+"OrderDetail/PostOrderDetail", detail);
+    this.Authorize();
+    return this.http.post(this.apiurl+"OrderDetail/PostOrderDetail", detail, {headers: this.headers});
   }
   //#endregion
 
   postOrder(order:Order){
-    return this.http.post(this.apiurl+"Order/PostOrder", order);
+    this.Authorize();
+    return this.http.post(this.apiurl+"Order/PostOrder", order, {headers: this.headers});
   }
 }

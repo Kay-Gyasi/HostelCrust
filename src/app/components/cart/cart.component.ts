@@ -63,13 +63,19 @@ export class CartComponent implements OnInit {
         this.order.isDelivery = this.isDeliver;
 
         this.service.postOrderDetail(this.orderDetail).subscribe({
-          next: data => {console.log(data)}
+          next: data => {console.log(data)},
+          error: error => {
+            if(error.status === 401){
+              localStorage.removeItem("token");
+              this.router.navigateByUrl("/login");
+            }
+          }
         });
       }
 
       this.service.postOrder(this.order).subscribe({
         next: data => {this.alertify.success("Order placed succesfully")},
-        error: error => {this.alertify.failed("Wrong order")}
+        error: error => {localStorage.removeItem("token"), this.router.navigateByUrl("/login")}
       })
     }
     localStorage.setItem('order', JSON.stringify(this.cart));
