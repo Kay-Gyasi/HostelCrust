@@ -107,33 +107,13 @@ export class ItemCardComponent implements OnInit {
     return false;
   }
 
-  isCake(){
-    if(this.property.title.includes("Cake In Cup (Chocolate)")){
+  isCakeInCup(){
+    if(this.property.title.includes("Cake In Cup")){
       return true;
     }
     return false;
   }
 
-  isRedVelvet(){
-    if(this.property.title.includes("Cake In Cup (Red velvet)")){
-      return true;
-    }
-    return false;
-  }
-
-  isVanilla(){
-    if(this.property.title.includes("Cake In Cup (Vanilla)")){
-      return true;
-    }
-    return false;
-  }
-
-  isMilk(){
-    if(this.property.title.includes("Milkshake")){
-      return true;
-    }
-    return false;
-  }
 
   isCoke(){
     if(this.property.title.includes("Coke")){
