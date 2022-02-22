@@ -135,6 +135,48 @@ export class ItemCardComponent implements OnInit {
     return false;
   }
 
+  isCoke(){
+    if(this.property.title.includes("Coke")){
+      return true;
+    }
+    return false;
+  }
+
+  isDonSimon(){
+    if(this.property.title.includes("Don Simon")){
+      return true;
+    }
+    return false;
+  }
+
+  isHunters(){
+    if(this.property.title.includes("Hunters")){
+      return true;
+    }
+    return false;
+  }
+
+  isKiss(){
+    if(this.property.title.includes("Kiss")){
+      return true;
+    }
+    return false;
+  }
+
+  isSmirnoff(){
+    if(this.property.title.includes("Smirnoff")){
+      return true;
+    }
+    return false;
+  }
+
+  isChampagne(){
+    if(this.property.title.includes("Champagne")){
+      return true;
+    }
+    return false;
+  }
+
   isLoggedin(){
     if(localStorage.getItem('token')){
       return true;

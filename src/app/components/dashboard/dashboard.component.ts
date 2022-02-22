@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
             props.push(data[id]);
           }
         }
-        return props;
+        return props.reverse();
       })
     )
   }
