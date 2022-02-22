@@ -30,12 +30,14 @@ export class RegisterComponent implements OnInit {
   onSubmit(info:Register, form:NgForm){
 
     this.service.addUser(this.registerInfo).subscribe({
-    next: data => {console.log(data), this.alertify.success("Registration successful");
+    next: data => {
+      console.log(data),
+      this.alertify.success("Registration successful");
     },
-      error: error => {console.log(error.StatusText), this.alertify.success("You are already registered. Log in")}
+      error: error => {console.log(error.StatusText)}
   });
-    form.reset();
-
     this.router.navigate(['/login']);
+
+    // form.reset();
   }
 }
