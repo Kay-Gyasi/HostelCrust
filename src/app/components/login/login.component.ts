@@ -13,7 +13,7 @@ import { SharedService } from 'src/app/services/shared.service';
 export class LoginComponent implements OnInit {
 
   loginReq:LoginReq = {
-    username:"",
+    email:"",
     password:""
   }
 

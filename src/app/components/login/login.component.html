@@ -9,7 +9,7 @@
     <form #loginForm="ngForm" novalidate (ngSubmit)="onSubmit(loginForm)" id="form" class="m-auto">
       <div class="form-group">
         <div class="form-floating mt-3">
-          <input #name="ngModel" required name="firstname" type="email" class="form-control" [(ngModel)]="loginReq.username"
+          <input #name="ngModel" required name="firstname" type="email" class="form-control" [(ngModel)]="loginReq.email"
           [class.is-invalid]="name.touched && name.invalid" placeholder="Email" id="nameField">
           <label for="username">Email Address</label>
         </div>
