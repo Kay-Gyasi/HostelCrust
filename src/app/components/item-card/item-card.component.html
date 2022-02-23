@@ -30,7 +30,7 @@
   </div>
   <div class="card-body p-2">
     <h4>{{ property.title }}</h4>
-    <h5>Price: GHS {{ property.price }}</h5>
+    <h5>GHS {{ property.price }}</h5>
     <h6><input class="form-control" *ngIf="!isOrder()" type="number" #quant="ngModel" [(ngModel)]="propCart.quantity" style="width: 10;"></h6>
   </div>
 

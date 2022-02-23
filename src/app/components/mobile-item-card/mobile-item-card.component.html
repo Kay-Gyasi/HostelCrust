@@ -17,7 +17,7 @@
     </div>
     <div class="col-6 bg-light pt-2">
       <h6 style="font-size:4vw; overflow-x: auto;">{{ property.title }}</h6>
-      <h6 style="color:grey;">Price: GHS {{ property.price }}</h6>
+      <h6 style="color:grey;">GHS {{ property.price }}</h6>
     </div>
     <div class="col-3 pt-1 bg-success btnrows" *ngIf="!isOrder()">
       <input class="form-control mt-1 mb-2" *ngIf="!isOrder()" type="number" #quant="ngModel" [(ngModel)]="propCart.quantity" style="width: 18vw; height:4.5vh; margin-left:-2vw;">
