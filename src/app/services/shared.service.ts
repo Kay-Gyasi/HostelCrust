@@ -68,8 +68,8 @@ export class SharedService {
     return this.http.post(this.apiurl+"Order/PostOrder", order, {headers: this.headers});
   }
 
-  sendMail(customer:string, orderNum:string){
+  sendMail(orderNum:string){
     this.Authorize();
-    return this.http.get(this.apiurl + "Mail/SendMail/" + customer + "/" +orderNum);
+    return this.http.get(this.apiurl + "Mail/SendMail/" +orderNum);
   }
 }

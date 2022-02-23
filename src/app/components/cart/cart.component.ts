@@ -78,7 +78,7 @@ export class CartComponent implements OnInit {
         error: error => {localStorage.removeItem("token"), this.router.navigateByUrl("/login")}
       });
 
-      this.service.sendMail(this.order.customer, this.order.orderNum).subscribe({
+      this.service.sendMail(this.order.orderNum).subscribe({
         next: data => { console.log(data) },
         error: error => { console.log(error)}
       });
