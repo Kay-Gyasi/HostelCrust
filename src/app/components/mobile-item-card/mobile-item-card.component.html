@@ -1,0 +1,31 @@
+<div class="container mt-3">
+  <div class="row mb-1" style="box-shadow: 1px 1px 1px 2px; border-radius: 2.5vw;">
+    <div class="col-2" style="height:15vh;">
+      <img *ngIf="isPepperoni()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg">
+      <img *ngIf="isVegetable()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2021/12/30/11/33/italian-cuisine-6903774_1280.jpg">
+      <img *ngIf="isBeef()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2017/06/27/08/41/gourmet-2446699_1280.jpg">
+      <img *ngIf="isMeat()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2021/04/06/14/38/pizza-6156566_1280.jpg">
+      <img *ngIf="isAll()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2018/03/04/20/05/pizza-3199081__340.jpg">
+
+      <img *ngIf="isCoke()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2016/06/11/09/51/coca-cola-1449843__340.jpg">
+      <img *ngIf="isSmirnoff()" class="col-12 img" id="imgrows" src="https://cdn.pixabay.com/photo/2017/09/03/21/05/smirnoff-2712084__340.jpg">
+      <img *ngIf="isKiss()" class="col-12 img" id="imgrows" src="https://dydza6t6xitx6.cloudfront.net/ci-kiss-cherry-cider-d927a40cff186b1d.jpeg">
+      <img *ngIf="isHunters()" class="col-12 img" id="imgrows" src="https://hunters.co.za/wp-content/uploads/2021/10/hunters-gold.png">
+      <img *ngIf="isDonSimon()" class="col-12 img" id="imgrows" src="https://smartdirectgh.com/wp-content/uploads/2020/07/x587_1_1_1.jpg">
+      <img *ngIf="isChampagne()" class="col-12 img" id="imgrows"  src="https://cdn.pixabay.com/photo/2012/04/15/21/02/champagne-35313__340.png">
+      <img *ngIf="isCakeInCup()" class="col-12 img" id="imgrows"  src="https://media.istockphoto.com/photos/chocolate-mug-cake-picture-id476849478?b=1&k=20&m=476849478&s=170667a&w=0&h=2eGqLleJJ8uKEf_DBBr0fnNq4unLNHUpDjJOnwEXoWY=">
+    </div>
+    <div class="col-7 bg-light pt-2">
+      <h6 style="font-size:4vw;">{{ property.title }}</h6>
+      <h6 style="color:grey;">Price: GHS {{ property.price }}</h6>
+    </div>
+    <div class="col-3 pt-1 bg-success btnrows" *ngIf="!isOrder()">
+      <input class="form-control mt-1 mb-2" *ngIf="!isOrder()" type="number" #quant="ngModel" [(ngModel)]="propCart.quantity" style="width: 18vw; height:4.5vh; margin-left:-2vw;">
+      <button class="btn btn-light" style="background-color:wheat; width:14vw;" (click)="addToCart(propCart)">+</button>
+    </div>
+    <div class="col-3 pt-1 bg-danger btnrows" *ngIf="isOrder()">
+      <button class="btn btn-light mt-3" style="width:15vw; background-color:wheat;" (click)="removeFromCart()">-</button>
+    </div>
+  </div>
+</div>
+

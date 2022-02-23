@@ -1,0 +1,19 @@
+.img{
+  width:15vw;
+  height:15vh;
+  margin-left:-3.5vw;
+}
+
+#imgrows{
+  border-top-left-radius: 2.5vw;
+  border-bottom-left-radius: 2.5vw;
+}
+
+.btnrows{
+  border-top-right-radius: 2.5vw;
+  border-bottom-right-radius: 2.5vw;
+}
+
+.btn-light{
+  border-radius: 5vw;
+}

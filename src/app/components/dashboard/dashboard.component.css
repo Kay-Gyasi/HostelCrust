@@ -7,6 +7,10 @@ phone-footer{
   display: none;
 }
 
+#mobileCard{
+  display: none;
+}
+
 @media screen and (max-width:600px) {
   app-footer{
     display: none;
@@ -14,5 +18,13 @@ phone-footer{
 
   phone-footer{
       display: flex;
+  }
+
+  #desktopCard{
+    display:none;
+  }
+
+  #mobileCard{
+    display: block;
   }
 }

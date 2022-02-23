@@ -23,6 +23,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './state/store/reducer';
 import { HostelEffects } from './state/effect/hostel.effect';
 import { PhoneFooterComponent } from './components/phone-footer/phone-footer.component';
+import { MobileItemCardComponent } from './components/mobile-item-card/mobile-item-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PhoneFooterComponent } from './components/phone-footer/phone-footer.com
     CartComponent,
     FilterPipe,
     SortPipe,
-    PhoneFooterComponent
+    PhoneFooterComponent,
+    MobileItemCardComponent
   ],
   imports: [
     BrowserModule,

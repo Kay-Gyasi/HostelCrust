@@ -41,6 +41,10 @@
   width: 28.9vw
 }
 
+.mobile{
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .pic{
     width: 90vw;

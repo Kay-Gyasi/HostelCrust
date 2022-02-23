@@ -1,10 +1,17 @@
 <div class="row">
+  <div class="row" style="text-align:center;">
+    <h1><i><b>Today's Menu</b></i></h1>
+  </div>
   <div class="container mt-2 mb-3">
     <input class="form-control row-fluid" type="text" placeholder="Search name, flavor or size of product you're looking for" [(ngModel)]="titles">
   </div>
 
-  <div class="shadow-lg col-sm-4 p-3 mb-5" *ngFor="let x of properties | filter:titles:'title'">
+  <div class="shadow-lg col-sm-4 p-3 mb-5" id="desktopCard" *ngFor="let x of properties | filter:titles:'title'">
     <app-item-card [property]="x"></app-item-card>
+  </div>
+
+  <div class="mb-2" id="mobileCard" *ngFor="let x of properties | filter:titles:'title'">
+    <app-mobile-item-card [property]="x"></app-mobile-item-card>
   </div>
 </div>
 
