@@ -76,7 +76,12 @@ export class CartComponent implements OnInit {
       this.service.postOrder(this.order).subscribe({
         next: data => {this.alertify.success("Order placed succesfully")},
         error: error => {localStorage.removeItem("token"), this.router.navigateByUrl("/login")}
-      })
+      });
+
+      this.service.sendMail(this.order.customer, this.order.orderNum).subscribe({
+        next: data => { console.log(data) },
+        error: error => { console.log(error)}
+      });
     }
     localStorage.setItem('order', JSON.stringify(this.cart));
   }
