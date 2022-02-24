@@ -70,6 +70,6 @@ export class SharedService {
 
   sendMail(orderNum:string){
     this.Authorize();
-    return this.http.get(this.apiurl + "Mail/SendMail/" +orderNum);
+    return this.http.get(this.apiurl + "Mail/SendMail/"+orderNum);
   }
 }
