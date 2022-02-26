@@ -23,7 +23,7 @@ phone-footer{
   }
 
   phone-footer{
-      display: flex;
+      display: block;
   }
 
   #desktopCard{
