@@ -1,9 +1,12 @@
 <div class="row">
-  <div class="row" style="text-align:center;">
-    <h1><i><b>Today's Menu</b></i></h1>
-  </div>
   <div class="container mt-2 mb-3">
-    <input class="form-control row-fluid" type="text" placeholder="Search name, flavor or size of product you're looking for" [(ngModel)]="titles">
+    <input class="form-control row-fluid" type="text" placeholder="Search name, flavor or size of product" [(ngModel)]="titles">
+
+    <img src="assets/images\dashpic.jpeg" class="mt-3 m-auto row" id="logo" alt="Hostel Crust Logo">
+  </div>
+
+  <div class="container mt-2">
+    <p class="m-auto"><strong>Collection ({{properties.length}})</strong></p>
   </div>
 
   <div class="shadow-lg col-sm-4 p-3 mb-5" id="desktopCard" *ngFor="let x of properties | filter:titles:'title'">
@@ -15,7 +18,7 @@
   </div>
 </div>
 
-<phone-footer></phone-footer>
+<phone-footer class="row"></phone-footer>
 
 <app-footer id="footer"></app-footer>
 

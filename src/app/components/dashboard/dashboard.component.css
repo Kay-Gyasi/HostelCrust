@@ -11,6 +11,12 @@ phone-footer{
   display: none;
 }
 
+#logo{
+  height: 65vh;
+  border-radius: 3vw;
+  width: 80vw;
+}
+
 @media screen and (max-width:600px) {
   app-footer{
     display: none;
@@ -26,5 +32,11 @@ phone-footer{
 
   #mobileCard{
     display: block;
+  }
+
+  #logo{
+    height: 30vh;
+    border-radius: 5vw;
+    width: 90vw;
   }
 }
