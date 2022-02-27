@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
 
   order = new Order();
 
-  orderNume = Math.floor((Math.random() * 10000) + 1);
+  orderNume:number;
 
   isDeliver:boolean;
 
@@ -35,6 +35,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.cart = JSON.parse(localStorage.getItem('Cart') || '{}');
+
+    this.orderNume = Math.floor((Math.random() * 10000) + 1);
 
     if(this.cart){
       for(const id in this.cart){
@@ -74,7 +76,7 @@ export class CartComponent implements OnInit {
       }
 
       this.service.postOrder(this.order).subscribe({
-        next: data => {this.alertify.success("Order placed succesfully")},
+        next: data => {this.alertify.success("Order placed succesfully. Your order ID is " + this.orderNume)},
         error: error => {localStorage.removeItem("token"), this.router.navigateByUrl("/login")}
       });
 
