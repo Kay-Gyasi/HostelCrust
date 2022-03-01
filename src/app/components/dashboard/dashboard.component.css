@@ -12,9 +12,7 @@ phone-footer{
 }
 
 #logo{
-  height: 65vh;
-  border-radius: 3vw;
-  width: 80vw;
+  display:none;
 }
 
 @media screen and (max-width:600px) {
@@ -35,6 +33,7 @@ phone-footer{
   }
 
   #logo{
+    display: block;
     height: 30vh;
     border-radius: 5vw;
     width: 90vw;
