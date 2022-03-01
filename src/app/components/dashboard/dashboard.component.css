@@ -38,4 +38,8 @@ phone-footer{
     border-radius: 5vw;
     width: 90vw;
   }
+
+  #footContainer{
+    display: none;
+  }
 }
