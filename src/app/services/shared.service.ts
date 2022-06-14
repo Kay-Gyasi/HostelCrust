@@ -15,7 +15,7 @@ export class SharedService {
 
   //private readonly apiurl = "https://localhost:7189/api/";
 
-  private readonly apiurl = "https://kaygyasiapi.herokuapp.com/api/";
+  private readonly apiurl = "https://api20220614210056.azurewebsites.net/api";
 
   loginInfo:LoginRes = new LoginRes();
   headers:HttpHeaders;
@@ -31,7 +31,7 @@ export class SharedService {
   //#region Products
   GetProducts(): Observable<Product[]>{
     this.Authorize();
-    return this.http.get<Product[]>(this.apiurl+"Product/GetProducts", {headers: this.headers}).pipe(
+    return this.http.get<Product[]>(this.apiurl+"/Product/GetProducts", {headers: this.headers}).pipe(
       map(data => {
         const productArray:Product[] = [];
 
@@ -46,30 +46,30 @@ export class SharedService {
   };
 
   addUser(user: Register){
-    return this.http.post(this.apiurl+"User/AddUser", user);
+    return this.http.post(this.apiurl+"/User/AddUser", user);
   }
   //#endregion
 
 
   authUser(login:LoginReq){
-    return this.http.post(this.apiurl+"Account/Login", login);
+    return this.http.post(this.apiurl+"/Account/Login", login);
   }
 
 
   //#region OrderDetails
   postOrderDetail(detail:Detail){
     this.Authorize();
-    return this.http.post(this.apiurl+"OrderDetail/PostOrderDetail", detail, {headers: this.headers});
+    return this.http.post(this.apiurl+"/OrderDetail/PostOrderDetail", detail, {headers: this.headers});
   }
   //#endregion
 
   postOrder(order:Order){
     this.Authorize();
-    return this.http.post(this.apiurl+"Order/PostOrder", order, {headers: this.headers});
+    return this.http.post(this.apiurl+"/Order/PostOrder", order, {headers: this.headers});
   }
 
   sendMail(orderNum:string){
     this.Authorize();
-    return this.http.get(this.apiurl + "Mail/SendMail/"+orderNum);
+    return this.http.get(this.apiurl + "/Mail/SendMail/"+orderNum);
   }
 }
